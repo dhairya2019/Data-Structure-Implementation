@@ -11,13 +11,13 @@ struct node* head;
 void Insert(int data, int pos){
 struct node* temp = new node();
 temp->data=data;
-if(pos==1){
+if(pos==0){
     temp->next=head;
     head=temp;
 }
 else{
     struct node* temp1 = head;
-    for(int i=1;i<pos-1;i++){
+    for(int i=0;i<pos-1;i++){
 
      temp1=temp1->next;
     }
@@ -43,10 +43,12 @@ while(temp2!=NULL){
 
 int main(){
 head=NULL;
-Insert(2,1);  //2
-Insert(3,2);  //2,3
-Insert(4,1);  //4,2,3
-Insert(5,2);  //4,5,2,3
+Insert(11,0);  //2
+Insert(9,1);  //2,3
+Insert(19,2);  //4,2,3
+Insert(10,3);  //4,5,2,3
+Insert(4,4);
+Insert(20,3);
 display();
 
 return 0;
