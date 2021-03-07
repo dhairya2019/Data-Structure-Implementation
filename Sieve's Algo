@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int n=25;
+    int sieve[25]={0};
+    for(int i=2;i<=n;i++){
+        if(sieve[i])continue;
+        for(int u=2*i;u<=n;u+=i)
+          sieve[u]=i;
+    }
+    
+    for(int j=2;j<=25;j++){
+        if(sieve[j]==0)
+        cout<<j<<endl;
+        else
+        continue;
+    }
+    
+    
+    return 0;
+}
